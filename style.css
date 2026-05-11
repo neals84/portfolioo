@@ -1,0 +1,206 @@
+/* -------------------- */
+/* STYLE GLOBAL PREMIUM */
+/* -------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    background: radial-gradient(circle at top, #1f2430, #14171d 60%);
+    color: #e5e7eb;
+    overflow-x: hidden;
+}
+
+/* Lumière d’ambiance */
+body::before {
+    content: "";
+    position: fixed;
+    top: -200px;
+    left: -200px;
+    width: 600px;
+    height: 600px;
+    background: rgba(59,130,246,0.15);
+    filter: blur(150px);
+    z-index: -1;
+}
+
+/* -------------------- */
+/* HEADER               */
+/* -------------------- */
+
+header {
+    background: rgba(36, 40, 50, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(59,130,246,0.4);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.header-container h1 {
+    margin: 0;
+    font-size: 2.6em;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 0 12px rgba(59,130,246,0.5);
+}
+
+.sous-titre {
+    margin-top: 10px;
+    font-size: 1.15em;
+    opacity: 0.85;
+}
+
+/* -------------------- */
+/* NAVIGATION           */
+/* -------------------- */
+
+nav {
+    margin-top: 25px;
+}
+
+nav a {
+    color: #d1d5db;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: 500;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: 0.25s ease;
+    border: 1px solid transparent;
+}
+
+nav a:hover {
+    background: rgba(59,130,246,0.18);
+    border-color: rgba(59,130,246,0.45);
+    box-shadow: 0 0 14px rgba(59,130,246,0.45);
+    color: #ffffff;
+}
+
+/* -------------------- */
+/* MAIN / LAYOUT        */
+/* -------------------- */
+
+main {
+    width: 85%;
+    max-width: 1100px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* -------------------- */
+/* TITRES               */
+/* -------------------- */
+
+h2 {
+    font-size: 2em;
+    color: #60a5fa;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(96,165,250,0.4);
+}
+
+h3 {
+    color: #93c5fd;
+    font-size: 1.5em;
+    margin-bottom: 12px;
+    text-shadow: 0 0 8px rgba(96,165,250,0.35);
+}
+
+/* -------------------- */
+/* CARTES PREMIUM       */
+/* -------------------- */
+
+.card {
+    background: rgba(42, 47, 58, 0.55);
+    backdrop-filter: blur(12px);
+    padding: 28px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.45);
+    transition: 0.35s ease;
+    animation: fadeIn 0.6s ease forwards;
+    opacity: 0;
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.015);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.6);
+    border-color: rgba(96,165,250,0.35);
+}
+
+/* Listes */
+.card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.card ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.card ul li:last-child {
+    border-bottom: none;
+}
+
+/* -------------------- */
+/* IMAGES               */
+/* -------------------- */
+
+.real-img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 12px;
+    display: block;
+    margin: 18px auto;
+    box-shadow: 0 0 18px rgba(59,130,246,0.45);
+}
+
+/* -------------------- */
+/* BOUTONS PREMIUM      */
+/* -------------------- */
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 0 12px rgba(59,130,246,0.45);
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #60a5fa, #3b82f6);
+    box-shadow: 0 0 18px rgba(96,165,250,0.7);
+}
+
+/* -------------------- */
+/* FOOTER               */
+/* -------------------- */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: rgba(36, 40, 50, 0.85);
+    color: #cbd5e1;
+    border-top: 1px solid rgba(59,130,246,0.4);
+    margin-top: 60px;
+}
+
+/* -------------------- */
+/* ANIMATIONS           */
+/* -------------------- */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
